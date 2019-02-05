@@ -1,0 +1,93 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewBuild
+  creationTimestamp: 2018-12-11T13:42:51Z
+  generation: 1
+  labels:
+    build: dashboard
+  name: dashboard
+  resourceVersion: "453208"
+  selfLink: /apis/image.openshift.io/v1/namespaces/hello/imagestreams/dashboard
+  uid: a7405502-fd4a-11e8-8099-2e84370806dc
+spec:
+  lookupPolicy:
+    local: false
+status:
+  dockerImageRepository: 172.30.1.1:5000/hello/dashboard
+  tags:
+  - items:
+    - created: 2019-01-20T14:48:39Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:41ee74b9718e7a325c607deadf3c4c03bfe5160f0b51711c8345f94c9da2a570
+      generation: 1
+      image: sha256:41ee74b9718e7a325c607deadf3c4c03bfe5160f0b51711c8345f94c9da2a570
+    - created: 2018-12-20T13:42:22Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:f6cde92fe7fdffb0e679b714679355a3f7f3c5f6a1ac1e34e4fc38dc445954f4
+      generation: 1
+      image: sha256:f6cde92fe7fdffb0e679b714679355a3f7f3c5f6a1ac1e34e4fc38dc445954f4
+    - created: 2018-12-20T13:39:51Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:b8ece0d3d4b7b0edc9addfee7ef51cc9b2bae24c365ce89739f74148a7d101c2
+      generation: 1
+      image: sha256:b8ece0d3d4b7b0edc9addfee7ef51cc9b2bae24c365ce89739f74148a7d101c2
+    - created: 2018-12-19T16:03:18Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:e7d9c3e108cd23dc729ad569312b454e45a51eb519db54218affd6812d46fa5b
+      generation: 1
+      image: sha256:e7d9c3e108cd23dc729ad569312b454e45a51eb519db54218affd6812d46fa5b
+    - created: 2018-12-19T16:01:41Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:501105935e6f97334806f340ef3cd2b1b2cf03f1fee6d6aee9c93dd432e0a0a3
+      generation: 1
+      image: sha256:501105935e6f97334806f340ef3cd2b1b2cf03f1fee6d6aee9c93dd432e0a0a3
+    - created: 2018-12-19T15:50:36Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:8db531c1babbc80c28d536ac92e2bb1c23c8b415f13c09079c710baefdda6b7f
+      generation: 1
+      image: sha256:8db531c1babbc80c28d536ac92e2bb1c23c8b415f13c09079c710baefdda6b7f
+    - created: 2018-12-17T22:21:23Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:eb87d63f491e9b2da41b9258ad4ee864fa347b686b73dfb2b55dc214e6d0091f
+      generation: 1
+      image: sha256:eb87d63f491e9b2da41b9258ad4ee864fa347b686b73dfb2b55dc214e6d0091f
+    - created: 2018-12-17T20:27:23Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:af091f1089afe7ffc40e7065d135cb0c4dca94279fab5e4f99c5d61991ee40df
+      generation: 1
+      image: sha256:af091f1089afe7ffc40e7065d135cb0c4dca94279fab5e4f99c5d61991ee40df
+    - created: 2018-12-17T19:51:08Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:c75be0e9ee17085b4907632d011a706fdccf22e667ea9c2e34b4acbae1fe827c
+      generation: 1
+      image: sha256:c75be0e9ee17085b4907632d011a706fdccf22e667ea9c2e34b4acbae1fe827c
+    - created: 2018-12-17T19:50:41Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:a410850b9e267236dc2ec4a143a05c9ff7a6767be27e459c60f43f1e15c3379a
+      generation: 1
+      image: sha256:a410850b9e267236dc2ec4a143a05c9ff7a6767be27e459c60f43f1e15c3379a
+    - created: 2018-12-17T19:49:26Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:54ebefd13c9efcb1b63757cb3a6d794c001febe3887853e3c79e88f13e032857
+      generation: 1
+      image: sha256:54ebefd13c9efcb1b63757cb3a6d794c001febe3887853e3c79e88f13e032857
+    - created: 2018-12-17T19:46:33Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:5318ebc4a9e916a31164ac0102724ac800842a8bfdc143f5a4f72c0adbff8962
+      generation: 1
+      image: sha256:5318ebc4a9e916a31164ac0102724ac800842a8bfdc143f5a4f72c0adbff8962
+    - created: 2018-12-17T19:28:24Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:2de73281a6c72505090b5cf3b7fbd68e5557520d70dd2b9200d9041e00711e51
+      generation: 1
+      image: sha256:2de73281a6c72505090b5cf3b7fbd68e5557520d70dd2b9200d9041e00711e51
+    - created: 2018-12-17T19:17:09Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:382fb5ab82bc99955b086b11d3850d997e5ee9c61363561dec43758cfbb2c508
+      generation: 1
+      image: sha256:382fb5ab82bc99955b086b11d3850d997e5ee9c61363561dec43758cfbb2c508
+    - created: 2018-12-11T16:04:51Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:629bc37be280d864a5a2e03c4751dfd0913d0e332655fd749e08f7d240ce7af6
+      generation: 1
+      image: sha256:629bc37be280d864a5a2e03c4751dfd0913d0e332655fd749e08f7d240ce7af6
+    - created: 2018-12-11T14:37:48Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:788248baa941071d0f222b90fbaa42d3b40a92be04bb67e109b952736457dbfa
+      generation: 1
+      image: sha256:788248baa941071d0f222b90fbaa42d3b40a92be04bb67e109b952736457dbfa
+    - created: 2018-12-11T13:49:22Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:9c97f5d85c2d94b8c4af61e6de5f95360686b54c9c0d55f9ed77a497e6060749
+      generation: 1
+      image: sha256:9c97f5d85c2d94b8c4af61e6de5f95360686b54c9c0d55f9ed77a497e6060749
+    - created: 2018-12-11T13:43:29Z
+      dockerImageReference: 172.30.1.1:5000/hello/dashboard@sha256:8e5df791c2fefab82ef465b77554cfc70092dd4b5f71db8b4413eefb8c865dd8
+      generation: 1
+      image: sha256:8e5df791c2fefab82ef465b77554cfc70092dd4b5f71db8b4413eefb8c865dd8
+    tag: latest

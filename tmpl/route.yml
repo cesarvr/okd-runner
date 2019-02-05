@@ -1,0 +1,9 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: <%=name%> 
+  labels: <%=name%>
+spec:
+  to:
+    kind: Service
+    name: <%=name%> 

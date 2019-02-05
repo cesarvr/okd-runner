@@ -1,0 +1,31 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  annotations:
+    app: <%=name%>
+  creationTimestamp: 2018-12-11T13:42:51Z
+  labels:
+    app: <%=name%>
+  name: <%=name%>
+spec:
+  failedBuildsHistoryLimit: 1
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: <%=name%>:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    binary: {}
+    type: Binary
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: nodejs:10
+        namespace: openshift
+    type: Source
+status:
+  lastVersion: 1

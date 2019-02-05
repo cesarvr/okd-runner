@@ -1,0 +1,26 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: <%=name%>
+spec:
+  replicas: 1
+  selector:
+    deployment-config.name: <%=name%>
+  strategy:
+    type: Rolling
+  template:
+    metadata:
+      labels:
+        deployment-config.name: <%=name%>
+    spec:
+      containers:
+      - image: 
+        imagePullPolicy: Always
+        name: default-container
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+ 

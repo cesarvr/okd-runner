@@ -1,0 +1,89 @@
+#include <nan.h>
+#include <iostream>
+
+// getpass()
+#include <pwd.h>
+#include <unistd.h>
+
+// sleep
+#include <unistd.h>
+
+using namespace std;
+
+template <typename Info>
+bool InvalidArgs(Info& info, int argc){
+
+    if (info.Length() < argc && !info[0]->IsStringObject()) {
+        Nan::ThrowTypeError("Wrong number of arguments");
+        return true;
+    }
+    return false;
+}
+
+
+struct Standard {
+  /* http://izs.me/v8-docs/process_8cc-example.html  */
+  static std::string ToString( v8::Local< v8::Value > value ) {
+
+      if(!value->IsString())
+          Nan::ThrowTypeError("Error: String type expected.");
+
+      v8::String::Utf8Value utf8_value(value);
+      return std::string(*utf8_value);
+  }
+};
+
+void GetInputBlocking(const Nan::FunctionCallbackInfo<v8::Value>& info) {
+
+    if(InvalidArgs(info, 1)) return;
+
+    auto message = Standard::ToString( info[0]->ToString() );
+    string input;
+
+    cout << message;
+    cin >> input;
+
+
+    info.GetReturnValue().Set(Nan::New(input.c_str()).ToLocalChecked());
+}
+
+void GetHiddenInputBlocking(const Nan::FunctionCallbackInfo<v8::Value>& info) {
+
+    if(InvalidArgs(info, 1)) return;
+
+    auto message = Standard::ToString( info[0]->ToString() );
+    char *psw = getpass(message.c_str());
+
+    string output(psw);
+    info.GetReturnValue().Set(Nan::New(output.c_str()).ToLocalChecked());
+}
+
+
+void Sleep(const Nan::FunctionCallbackInfo<v8::Value>& info) {
+
+    sleep(1000);
+    info.GetReturnValue().Set(Nan::New("ok").ToLocalChecked());
+}
+
+
+void Method(const Nan::FunctionCallbackInfo<v8::Value>& info) {
+    info.GetReturnValue().Set(Nan::New("world").ToLocalChecked());
+}
+
+void Init(v8::Local<v8::Object> exports) {
+    exports->Set(Nan::New("hello").ToLocalChecked(),
+                 Nan::New<v8::FunctionTemplate>(Method)->GetFunction());
+
+    exports->Set(Nan::New("input").ToLocalChecked(),
+                 Nan::New<v8::FunctionTemplate>(GetInputBlocking)->GetFunction());
+
+    exports->Set(Nan::New("password").ToLocalChecked(),
+                 Nan::New<v8::FunctionTemplate>(GetHiddenInputBlocking)->GetFunction());
+
+    exports->Set(Nan::New("sleep").ToLocalChecked(),
+                 Nan::New<v8::FunctionTemplate>(Sleep)->GetFunction());
+
+
+}
+
+NODE_MODULE(hello, Init)

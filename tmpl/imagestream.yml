@@ -1,0 +1,13 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+      app: <%=name%>
+  generation: 1
+  labels:
+    app: <%=name%>
+    build: <%=name%>
+  name: <%=name%>
+spec:
+  lookupPolicy:
+    local: false
