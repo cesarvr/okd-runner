@@ -60,9 +60,14 @@ void GetHiddenInputBlocking(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 
 
 void Sleep(const Nan::FunctionCallbackInfo<v8::Value>& info) {
+    int32_t sleep_timer = 10;
 
-    sleep(1000);
-    info.GetReturnValue().Set(Nan::New("ok").ToLocalChecked());
+    if(info[0]->IsNumber()) {
+        sleep_timer = info[0]->Int32Value();
+    } 
+
+    sleep(sleep_timer);
+    info.GetReturnValue().Set(Nan::New(sleep_timer));
 }
 
 

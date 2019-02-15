@@ -1,25 +1,30 @@
 {
-  "name": "okd-runner",
-  "version": "0.0.3",
-  "description": "Self deploying Node.JS applications in OpenShift.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cesarvr/okd-runner.git"
-  },
-  "homepage": "https://github.com/cesarvr/okd-runner",
-  "keywords": ["OpenShift", "Kubernetes", "Deployment"],
-  "author": "Cesar Valdez",
-  "gypfile": true,
-  "license": "MIT",
-  "dependencies": {
-    "bindings": "^1.3.1",
-    "lodash": "^4.17.11",
-    "nan": "^2.12.1",
-    "node-addon-api": "^1.6.2",
-    "okd-api": "^0.7.0"
-  }
+    "author": "Cesar Valdez",
+    "dependencies": {
+        "bindings": "^1.3.1",
+        "lodash": "^4.17.11",
+        "nan": "^2.12.1",
+        "node-addon-api": "^1.6.2",
+        "okd-api": "^0.9.5"
+    },
+    "description": "Self deploying Node.JS applications in OpenShift.",
+    "gypfile": true,
+    "homepage": "https://github.com/cesarvr/okd-runner",
+    "keywords": [
+        "OpenShift",
+        "Kubernetes",
+        "Deployment"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "name": "okd-runner",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cesarvr/okd-runner.git"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "version": "0.0.10"
 }
