@@ -5,6 +5,7 @@ using namespace std;
 #if defined( __linux__) || defined(__APPLE__)
     //linux code goes here
     #include <pwd.h>
+    #include <unistd.h>
     #include <chrono>
     #include <thread>
 #elif _WIN32
