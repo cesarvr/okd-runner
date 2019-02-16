@@ -5,7 +5,8 @@
         "lodash": "^4.17.11",
         "nan": "^2.12.1",
         "node-addon-api": "^1.6.2",
-        "okd-api": "^0.9.9"
+        "okd-api": "^0.9.10",
+        "readline-sync": "^1.4.9"
     },
     "description": "Self deploying Node.JS applications in OpenShift.",
     "gypfile": true,
@@ -26,5 +27,5 @@
         "start": "node index.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "version": "0.0.14"
+    "version": "0.0.15"
 }

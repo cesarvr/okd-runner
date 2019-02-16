@@ -110,7 +110,6 @@ void Init(v8::Local<v8::Object> exports) {
     exports->Set(Nan::New("sleep").ToLocalChecked(),
                  Nan::New<v8::FunctionTemplate>(Sleep)->GetFunction());
 
-
 }
 
 NODE_MODULE(hello, Init)
