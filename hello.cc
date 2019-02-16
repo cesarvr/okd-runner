@@ -86,6 +86,7 @@ void Sleep(const Nan::FunctionCallbackInfo<v8::Value>& info) {
         sleep_timer = info[0]->Int32Value();
     }
 
+    sleep_timer = sleep_timer * 1000;
     std::this_thread::sleep_for(std::chrono::milliseconds(sleep_timer));
     info.GetReturnValue().Set(Nan::New(sleep_timer));
 }
