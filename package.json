@@ -5,7 +5,7 @@
         "lodash": "^4.17.11",
         "nan": "^2.12.1",
         "node-addon-api": "^1.6.2",
-        "okd-api": "^0.9.10",
+        "okd-api": "^0.9.13",
         "readline-sync": "^1.4.9"
     },
     "description": "Self deploying Node.JS applications in OpenShift.",
@@ -25,7 +25,10 @@
     },
     "scripts": {
         "start": "node index.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "clear && mocha --exit test/"
     },
-    "version": "0.1.1"
+    "version": "0.1.9",
+    "devDependencies": {
+        "chai": "^4.2.0"
+    }
 }
