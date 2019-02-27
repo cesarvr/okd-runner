@@ -16,6 +16,7 @@ Once you have OpenShift sorted out, you'll need to create a project/namespace ma
 ![](https://github.com/cesarvr/hugo-blog/blob/master/static/self-deploy/making-project.gif?raw=true)
 
 <BR>
+    
 ### Self Deploying
 
 Now we should get back to our working directory and install ``okd-runner`` [module from npm](https://www.npmjs.com/package/okd-runner), this is the module that does the *magic*:
