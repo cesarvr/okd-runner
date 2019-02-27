@@ -1,5 +1,5 @@
 ## OKD-runner
-Write self-deploying Node.js applications for *OpenShift* and soon in *Kubernetes*.
+This library helps to write self-deploying Node.js applications for *OpenShift* and **soon** in *Kubernetes*.
 
 #### Setup
 Now this guide assume you got an OpenShift cluster up and running, if you don't, you still can get access to [OpenShift Online](https://manage.openshift.com/) for free or setup one in your computer via [Minishift](https://github.com/minishift/minishift) or [oc cluster-up](https://github.com/cesarvr/Openshift#ocup).
