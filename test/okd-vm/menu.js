@@ -1,7 +1,7 @@
-const login = require('../../okd-api/lib/okd').login
-const { delay, errors } = require('./help')
+const login = require('../../../okd-api/lib/okd').login
+const { delay, errors } = require('../help')
 const assert = require('chai').assert
-const menu = require('../lib/helper/menu')
+const menu = require('../../lib/helper/menu')
 
 let _attach = null
 let okd  = null
@@ -28,19 +28,17 @@ describe.skip('Testing Menu', function() {
     it('menu should be a function', function(){
         assert.isFunction(menu,'should be a function')
     })
+
     it('menu should be generated dynamically' , function() {
-        return menu(okd, 'deploy', 'Choose your deployment').then(deploy =>{
-            console.log('deploy->', deploy)
-        })
-
+        return menu(okd, ['deploy','bc'], 'Choose your deployment')
+            .then(deploy =>{
+                console.log('deploy->', deploy)
+            })
     })
+
     it('adding a filter' , function() {
-        return menu(okd, 'deploy', 'Choose your deployment', d => d.metadata.name !== 'sleep' ).then(deploy =>{
+        return menu(okd, ['deploy','bc'], 'Choose your deployment', d => d.metadata.name !== 'sleep' ).then(deploy =>{
             console.log('deploy->', deploy)
         })
     })
-
-
-
 })
-

@@ -20,6 +20,9 @@ spec:
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
+        resources:
+          limits:
+            memory: <%=memory%> 
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler

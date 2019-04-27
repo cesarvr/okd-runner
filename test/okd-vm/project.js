@@ -1,9 +1,9 @@
-const login = require('../../okd-api/lib/okd').login
-const { delay, errors } = require('./help')
+const login = require('../../../okd-api/lib/okd').login
+const { delay, errors } = require('../help')
 const assert = require('chai').assert
-const project = require('../lib/okd/proj')
-const templates = require('../lib/helper/templates')
-const deployment = require('../lib/okd/deployment')
+const project = require('../../lib/okd/proj')
+const templates = require('../../lib/helper/templates')
+const deployment = require('../../lib/okd/deployment')
 
 let proj = null
 let okd  = null
