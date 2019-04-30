@@ -19,4 +19,7 @@ spec:
         image: 172.30.1.1:5000/hello/micro-1@sha256:a8fc9cac357618109cc08337e5985391f3c5139c2aeaeaba0de96e01a8daed89 
         ports:
         - containerPort: 8080
+        resources:
+          limits:
+            memory: <%=memory || 80%>Mi 
 
